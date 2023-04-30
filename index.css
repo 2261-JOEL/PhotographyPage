@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    margin-bottom: 5rem;
+    /* background-color: rgba(165, 160, 160, 0.8); */
+    background-color: rgb(41, 40, 40, 0.2);
+}
+
+
+header {
+    width: 100%;
+    border: 2px solid rgb(41, 40, 40, 0.5);
+    background-color: rgb(41, 40, 40, 0.5);
+    min-height: 100px;
+}
+
+
+:root {
+    --backgroung-color-used: rgb(71, 69, 69, 0.5);
+}
+
+.main_container {
+    width: 95%;
+    /* border: 1px solid black; */
+    margin-top: 2em;
+    /* min-height: 800px; */
+    height: fit-content;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.main_container .europe_trips,
+.school_days {
+    width: 100%;
+    /* border: 1px solid black; */
+    height: 300px;
+    margin: 0 auto;
+    /* padding-left: 0.6em; */
+    display: flex;
+    gap: 1.5em;
+    border-radius: 10px;
+    flex-wrap: nowrap;
+    /* overflow-x: scroll;
+overflow-y: hidden; */
+    background-color: var(--backgroung-color-used);
+}
+
+
+.main_container .school_days::before {
+    content: "Feazel ♥ Venissa | Maternity PhotoShoot";
+    font-weight: bold;
+    text-align: center;
+    padding: 0.4em 0;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(41, 40, 40);
+    color: aliceblue;
+    font-size: large;
+    max-height: 20px;
+    position: absolute;
+    top: -0.1em;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1.3px solid black;
+
+}
+
+
+.main_container .school_days>img {
+    min-width: 330px;
+    width: 80%;
+    max-width: 450px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+
+
+
+.main_container .school_days {
+    max-width: 600px;
+}
+
+
+
+
+.main_container .europe_trips>img {
+    height: 250px;
+    margin-top: 1.5em;
+    min-width: 330px;
+    box-shadow: 4px 4px 15px black;
+    border-radius: 7px;
+}
+
+
+.grid {
+    display: grid;
+    width: 90%;
+    gap: 1em;
+    margin: 0 auto;
+    margin-top: 2.5em;
+    border: 2px solid black;
+    position: relative;
+    padding-top: 0.2em;
+    background-color: rgb(71, 69, 69, 0.8);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0.5em;
+    /* border-radius: 1.1em; */
+}
+
+.grid::before {
+    content: "We Undertake...";
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em 0;
+    width: 100%;
+    background-color: rgb(41, 40, 40);
+    color: aliceblue;
+    font-size: large;
+    max-height: 20px;
+    position: absolute;
+    top: -2em;
+    border: 1.3px solid black;
+    border-radius: 0.5em;
+
+}
+
+
+.img-wrapper {
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+.img-wrapper>img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px black;
+    /* max-width: 400px; */
+}
+
+.img-wrapper>.content {
+    position: absolute;
+    inset: 0;
+    font-size: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-wrapper>img,
+.img-wrapper>.content {
+    transition: 200ms ease-in-out;
+}
+
+.img-wrapper:hover>img.blur {
+    filter: blur(5px);
+}
+
+.img-wrapper:hover>img.gray {
+    filter: grayscale(1);
+}
+
+.img-wrapper:hover>img.zoom {
+    transform: scale(1.1);
+}
+
+.img-wrapper>.content.fade {
+    opacity: 0;
+}
+
+.img-wrapper:hover>.content.fade {
+    opacity: 1;
+}
+
+.img-wrapper>.content.slide-left {
+    transform: translateX(-100%);
+}
+
+.img-wrapper:hover>.content.slide-left {
+    transform: translateX(0);
+}
+
+.img-wrapper>.content.slide-right {
+    transform: translateX(100%);
+}
+
+.img-wrapper:hover>.content.slide-right {
+    transform: translateX(0);
+}
+
+.img-wrapper>.content.slide-down {
+    transform: translateY(-100%);
+}
+
+.img-wrapper:hover>.content.slide-down {
+    transform: translateY(0);
+}
+
+.img-wrapper>.content.slide-up {
+    transform: translateY(100%);
+}
+
+.img-wrapper:hover>.content.slide-up {
+    transform: translateY(0);
+}
